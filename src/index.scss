@@ -1,0 +1,503 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+/* ================================================ */
+
+/* ========================================================================== 
+    
+  typography 
+  ========================================================================== */
+  $fontUbuntu: "Ubuntu", "Arial", sans-serif;
+  @mixin font-item($style: normal, $size: 18px, $height: normal, $weight: 300, $family: $fontUbuntu, $align: left) {
+   font-style: $style;
+   font-size: $size;
+   line-height: $height;
+   font-weight: $weight;
+   font-family: $family;
+   text-align: $align;
+  }
+.content-box.wrapper-oneplus6t {
+
+  h1.title-h1 {
+    @include font-item($size: 56px, $weight: 700);
+  }
+
+  h2.title-h2 {
+    @include font-item($size: 45px, $weight: 700);
+  }
+
+  h3.title-h3 {
+    @include font-item($size: 22px, $weight: 700, $align: center);
+  }
+
+  p {
+    @include font-item($height: 25px);
+  }
+
+  span.small-text {
+    @include font-item($size: 16px, $weight: 400, $align: center);
+  }
+
+  .text-bold {
+    font-weight: 700;
+  }
+
+  @media (max-width: 1365px) {
+
+    h1.title-h1 {
+        @include font-item($size: 40px, $weight: 700);
+      }
+    
+      h2.title-h2 {
+        @include font-item($size: 40px, $weight: 700);
+      }
+    
+      h3.title-h3 {
+        @include font-item($size: 18px, $weight: 700, $align: center);
+      }
+    
+      p {
+        @include font-item($size: 16px, $height: 22px);
+      }
+    
+      span.small-text {
+        @include font-item($size: 14px, $weight: 400, $align: center);
+      }
+  }
+
+  @media (max-width: 1023px) {
+    h1.title-h1 {
+        @include font-item($size: 30px, $weight: 700);
+    }
+
+    h2.title-h2 {
+        @include font-item($size: 30px, $weight: 700);
+    }
+
+    h3.title-h3 {
+        @include font-item($size: 15px, $weight: 700, $align: center);
+    }
+
+    p {
+        @include font-item($size: 14px, $height: 19px);
+    }
+
+    span.small-text {
+        @include font-item($size: 14px, $weight: 400, $align: center);
+    }
+  }
+
+  @media (max-width: 767px) {
+    h1.title-h1 {
+        @include font-item($size: 28px, $weight: 700);
+    }
+
+    h2.title-h2 {
+        @include font-item($size: 28px, $weight: 700);
+    }
+
+    h3.title-h3 {
+        @include font-item($size: 14px, $weight: 700, $align: center);
+    }
+
+    span.small-text {
+        @include font-item($size: 12px, $weight: 400, $align: center);
+    }
+  }
+}
+
+/* ========================================================================== 
+    
+  colors 
+  ========================================================================== */
+.content-box.wrapper-oneplus6t {
+
+  .text-black {
+    color: #000000;
+  }
+
+  .text-light {
+    color: #ffffff;
+  }
+
+  .text-grey {
+    color: #656565;
+  }
+
+  .title-grey {
+    color: #BDBDBD;
+  }
+
+  .page-section.section-header {
+    background: 
+      url("./gallery/logo.svg") 157px 263px / 237px 42px no-repeat,
+      url("./images/banner_oneplus6t.png") no-repeat;
+  }
+
+  .page-section.section-list {
+    background: #000000;
+  }
+
+  .page-section.section-amoled {
+    background:
+      url("./gallery/icon_amoled.svg") calc(100% - 144px) 217px no-repeat,
+      url("./images/oneplus6t_03.png") 50% calc(100% - 80px) no-repeat,
+      url("./images/construction_bg.png") no-repeat;
+  }
+
+  .page-section.section-snapdragon {
+    background: 
+      url("./images/oneplus6t_04.png") 50% 130% no-repeat,
+      url("./images/fast_work_bg.png") no-repeat;
+  }
+
+  .page-section.section-footer {
+    background: #F4F4F4;
+  }
+
+  @media (max-width: 1365px) {
+    .page-section.section-header {
+      background: 
+        url("./gallery/logo.svg") 122px 204px / 165px 42px no-repeat,
+        url("./images/banner_oneplus6t.png") 0 0 / cover no-repeat;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .page-section.section-header {
+      background: 
+        url("./gallery/logo.svg") 96px 166px / 116px 30px no-repeat,
+        url("./images/banner_oneplus6t.png") no-repeat;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .page-section.section-header {
+      background: 
+        url("./gallery/logo.svg") 96px 166px / 120px 30px no-repeat,
+        url("./images/banner_oneplus6t.png") no-repeat;
+    }
+  }
+
+}
+  
+  /* ==================================================== */
+  
+  /* indents
+     ========================================================================== */
+  .content-box.wrapper-oneplus6t {
+    max-width: 1366px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .indent-big {
+      margin-bottom: 80px;
+    }
+  
+    .indent-medium {
+      margin-bottom: 40px;
+    }
+  
+    .indent-small {
+      margin-bottom: 20px;
+    }
+  
+    .indent-mini {
+      margin-bottom: 10px;
+    }
+  
+    .indent-inside-big {
+      padding-top: 80px;
+    }
+
+    @media (max-width: 1365px) {
+      .indent-big {
+        margin-bottom: 60px;
+      }
+      .indent-inside-big {
+        padding-top: 60px;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .indent-big {
+        margin-bottom: 40px;
+      }
+      .indent-medium {
+        margin-bottom: 30px;
+      }
+      .indent-small {
+        margin-bottom: 15px;
+      }
+      .indent-inside-big {
+        padding-top: 40px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .indent-big {
+        margin-bottom: 32px;
+      }
+      .indent-medium {
+        margin-bottom: 20px;
+      }
+      .indent-small {
+        margin-bottom: 10px;
+      }
+      .indent-inside-big {
+        padding-top: 32px;
+      }
+    }
+  
+  }
+  
+  /* mixins
+     ========================================================================== */
+   
+     .image-align {
+       margin: 0 auto;
+     }
+  /* ========================================================================== 
+  
+     page-section
+     ========================================================================== */
+  
+.page-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 87px;
+  img {
+    display: block;
+    height: auto;
+  }
+
+  @media (max-width: 1365px) {
+    padding: 0 40px; 
+  }
+
+  @media (max-width: 1023px) {
+    padding: 0 24px; 
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 16px; 
+  }
+}
+
+/* section-header
+   ========================================================================== */
+
+.page-section.section-header {
+  padding: 325px 0 325px 157px;
+
+  @media (max-width: 1365px) {
+    padding: 265px 0 204px 122px;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 205px 0 166px 96px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 108px 16px 384px; 
+  }
+}
+
+/* section-header
+   ========================================================================== */
+
+.page-section.section-list {
+  .wrapper-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .item-list {
+      position: relative;
+      flex-basis: 50%;
+      padding: 80px 0;
+      text-align: center;
+      &:not(:first-child)::before {
+        content: "";
+        position: absolute;
+        top: 38px;
+        left: 0;
+        display: inline-block;
+        width: 1px;
+        height: 144px;
+        background: #ffffff; 
+      }
+    }
+  }
+}
+
+/* section-unlock
+   ========================================================================== */
+
+.page-section.section-unlock {
+  .wrapper-unlock {
+    display: flex;
+    .left {
+      .detail-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 128px;
+      }
+    }
+    .right {
+      display: flex;
+      margin-left: 108px;
+      img + img {
+        margin-left: 90px;
+      }
+    }
+  }
+  @media (max-width: 1365px) {
+    .wrapper-unlock {
+      .right {
+        margin-left: 70px;
+        img + img {
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1023px) {
+ .wrapper-unlock {
+      .right {
+        margin-left: 36px;
+        img + img {
+          margin-left: 36px;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .wrapper-unlock {
+      .right {
+        margin-left: 0;
+        img + img {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+/* section-amoled
+   ========================================================================== */
+
+.page-section.section-amoled {
+  padding-bottom: 355px;
+}
+
+/* wrapper-oneplus
+   ========================================================================== */
+
+.wrapper-oneplus {
+  display: flex;
+  .left {
+    flex-basis: 50%;
+  }
+  .right {
+    padding-left: 122px;
+    flex-basis: 50%;
+    .list-items {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        &:nth-child(2n) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+    .item-img {
+      display: block;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+/* section-camera
+   ========================================================================== */
+
+.page-section.section-camera {
+  .image-camera {
+    margin: 0 auto -1px;
+  }
+}
+
+/* section-snapdragon
+   ========================================================================== */
+
+.page-section.section-snapdragon {
+  padding-bottom: 588px;
+}
+
+/* section-footer
+   ========================================================================== */
+
+   .page-section.section-footer {
+     padding-bottom: 80px;
+     p {
+       max-width: 616px;
+     }
+     .images-wrapper {
+       display: flex;
+       justify-content: center;
+     }
+     img + img {
+       margin-left: 108px;
+     }
+   }
